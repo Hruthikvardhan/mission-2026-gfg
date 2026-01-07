@@ -26,27 +26,23 @@ class Solution {
     }
 }
 
-full code :
-import java.util.Scanner;
+full code : note pad
+import java.util.*;
 import java.lang.Math;
 
-public class Solution {
+public class Main{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a number: ");
+int n = sc.nextInt();
+double ans = sqrt(n);
 
-    // method to return exact square root
-    static double exactSqrt(int n) {
-        return Math.sqrt(n);
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();   // input number
-        double result = exactSqrt(n);
-
-        System.out.println(result);  // output exact square root
-    }
+System.out.println(ans);
 }
-
+static double sqrt(int n){
+ return (double) Math.sqrt(n);
+}
+}
 
 another version 
 class Solution {
