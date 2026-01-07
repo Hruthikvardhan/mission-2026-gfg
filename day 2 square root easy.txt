@@ -1,4 +1,4 @@
-Square Root
+/*Square Root
 Difficulty: EasyAccuracy: 54.03%Submissions: 356K+Points: 2Average Time: 20m
 Given a positive integer n, find the square root of n. If n is not a perfect square, then return the floor value.
 
@@ -26,7 +26,11 @@ class Solution {
     }
 }
 
+<<<<<<< HEAD
 full code : note pad
+=======
+full code :note pad
+>>>>>>> b9053f7b2d96e0cb2e1ca5089dbe8ccb3b585a6d
 import java.util.*;
 import java.lang.Math;
 
@@ -38,11 +42,21 @@ int n = sc.nextInt();
 double ans = sqrt(n);
 
 System.out.println(ans);
+<<<<<<< HEAD
 }
 static double sqrt(int n){
  return (double) Math.sqrt(n);
 }
 }
+=======
+}
+static double sqrt(int n){
+ return (double) Math.sqrt(n);
+}
+}
+
+
+>>>>>>> b9053f7b2d96e0cb2e1ca5089dbe8ccb3b585a6d
 
 another version 
 class Solution {
@@ -54,4 +68,18 @@ class Solution {
         }
         return -1; // not a perfect square
     }
+}*/
+import java.util.*;
+import java.lang.Math;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = sc.nextInt();
+
+        int ans = (int) Math.sqrt(n);  // floor square root
+        System.out.println(ans);
+    }
 }
+
