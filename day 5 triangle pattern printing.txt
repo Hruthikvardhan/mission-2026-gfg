@@ -1,0 +1,54 @@
+Pattern 7
+Difficulty: BasicAccuracy: 62.43%Submissions: 57K+Points: 1Average Time: 10m
+Geek is very fond of patterns. Once, his teacher gave him a pattern to solve. He gave Ram an integer n and asked him to build a pattern.
+Help Ram build a pattern.
+
+Example 1:
+
+Input: 5
+Output:
+    *
+   ***  
+  *****
+ *******
+*********
+Example 2:
+
+Input: 3
+Output:
+  *
+ ***  
+*****
+Your Task:
+You don't need to input anything. Complete the function printTriangle() which takes an integer n  as the input parameter and prints the pattern.
+
+Expected Time Complexity: O(n2).
+Expected Auxiliary Space: O(1)
+
+Constraints:
+1<= n <= 1000
+
+Topic Tags
+
+pre written 
+
+class Solution {
+
+    void printTriangle(int n) {
+        for (int i = 1; i <= n; i++) {
+
+            // print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // print stars
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+
+            // move to next line AFTER each row
+            System.out.println();
+        }
+    }
+}
