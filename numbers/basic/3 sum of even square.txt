@@ -1,0 +1,17 @@
+class Solution {
+    public long sum_of_square_evenNumbers(long n) {
+        return 4 * n * (n + 1) * (2 * n + 1) / 6;
+    }
+}
+
+use long result may long
+
+public class Main{
+    public static void fun(int n){
+        int ans = 4 * n*(n+1)*(2*n+1)/6;
+        System.out.println(ans);
+    }
+    public static void main(String [] args){
+        fun(3);
+    }
+}

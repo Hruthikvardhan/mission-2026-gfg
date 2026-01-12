@@ -1,0 +1,22 @@
+// User function Template for Java
+
+class Solution {
+    public long sum_of_square_oddNumbers(long n) {
+        // Code here
+        return n*(2 *n-1)*(2*n+1)/3;
+    }
+}
+
+Power of Pow | Odd Numbers
+Difficulty: BasicAccuracy: 52.24%Submissions: 17K+Points: 1
+Given a single integer N, your task is to find the sum of the square of the first N odd natural Numbers.
+ 
+
+Example 1:
+Input: 2
+Output: 10
+Explanation: 12 + 32 = 10
+Example 2: 
+Input: 3
+Output: 35
+Explanation: 12 + 32 + 52 = 35
