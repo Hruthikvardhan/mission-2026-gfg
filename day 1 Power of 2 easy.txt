@@ -15,6 +15,18 @@ Constraints:
 0 ≤ n < 109
 
 
+
+leett codeeeeeeeeeeee
+
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        return n>0 && (n&(n-1))==0;
+    }
+}
+
+explanation :  for power for 2 having bit manuplation 1000  so we are using this optimal way
+
+
 code :
 class Solution {
     public static boolean isPowerofTwo(int n) {

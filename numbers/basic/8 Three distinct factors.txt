@@ -1,0 +1,123 @@
+Three distinct factors
+Difficulty: BasicAccuracy: 27.0%Submissions: 17K+Points: 1Average Time: 15m
+Given a positive integer N. The task is to check whether a number has exactly three distinct factors or not.
+
+ 
+
+Example 1:
+
+Input:
+N = 10
+Output:
+0
+Explanation:
+10 has 4 factors- 1,2,5 and 10.
+So, the Ouput is 0.
+Example 2:
+
+Input:
+N = 9
+Output:
+1
+Explanation:
+9 has 3 factors- 1,3 and 9.
+So, the Ouput is 1.
+ 
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function hasThreePrimeFac() which takes an Integer N as input and returns 1 if it has exactly 3 factors else returns 0.
+
+ 
+
+Expected Time Complexity: O(sqrt(N))
+Expected Auxiliary Space: O(1)
+
+ 
+
+Constraints:
+1 <= N <= 1012
+
+
+code :
+// User function Template for Java
+
+class Solution {
+    static int hasThreePrimeFac(Long N) {
+
+        if(N<4){
+            return 0;
+        }
+        
+        long root = (long)Math.sqrt(N);
+        
+        while((root+1)*(root+1)<=N){
+            root++;
+        }
+        while(root * root > N){
+            root--;
+        }
+        
+        if(root*root !=N){
+            return 0;
+        }
+        
+        for(int i=2;i*i<=root;i++){
+            if(root%i ==0){
+                return 0;
+            }
+        }
+        return 1;
+    }
+}
+
+
+full code :
+import java.util.*;
+
+public class Solution {
+
+    static int hasThreePrimeFac(Long N) {
+
+        // Numbers less than 4 cannot have 3 distinct factors
+        if (N < 4) {
+            return 0;
+        }
+
+        // Approximate square root
+        long root = (long) Math.sqrt(N);
+
+        // Fix Math.sqrt precision issue
+        while ((root + 1) * (root + 1) <= N) {
+            root++;
+        }
+        while (root * root > N) {
+            root--;
+        }
+
+        // Check perfect square
+        if (root * root != N) {
+            return 0;
+        }
+
+        // Check if root is prime
+        for (long i = 2; i * i <= root; i++) {
+            if (root % i == 0) {
+                return 0;
+            }
+        }
+
+        return 1;
+    }
+
+    public static void main(String[] args) {
+
+        // Sample tests
+        Long N1 = 9L;
+        Long N2 = 10L;
+        Long N3 = 320517409L;
+
+        System.out.println(hasThreePrimeFac(N1)); // 1
+        System.out.println(hasThreePrimeFac(N2)); // 0
+        System.out.println(hasThreePrimeFac(N3)); // 1
+    }
+}
