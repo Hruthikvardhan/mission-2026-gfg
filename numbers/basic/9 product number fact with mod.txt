@@ -1,0 +1,61 @@
+Product of factors of number
+Difficulty: BasicAccuracy: 36.63%Submissions: 10K+Points: 1
+Given a number N. Calculate the product of all factors of N. Since Answer can be very large,compute the answer modulo 109+7.
+
+
+Example 1:
+
+Input:
+N=6
+Output:
+36
+Explanation:
+Factors of 6 are 1,2,3,6.Their product is
+(1*2*3*6)%(109+7)=36.
+
+Example 2:
+
+Input:
+N=25
+Output:
+125
+Explanation:
+The factors of 25 are 1,5 and 25.
+So, Their product is (1*5*25)%(109+7)
+=125.
+
+Your Task:
+You don't need to read input or print anything.Your task is to complete the function factorProduct() which takes a number N as input parameter and returns the product of all factors of N.
+
+
+Expected Time Complexity:O(Sqrt(N))
+Expected Auxillary Space:O(1)
+
+
+Constraints:
+1<=N<=109 
+
+Topic Tags
+Related Articles
+code :
+// User function Template for Java
+
+class Solution {
+    int factorProduct(int N) {
+        final int mod = (int)Math.pow(10,9)+7;
+        long prod = 1;
+        
+        for(int i=1;i*i<=N;i++){
+            if(N%i==0){
+                if(i*i ==N){
+                    prod = (prod *i)%mod;
+                }
+                else{
+                    prod = (prod *i)%mod;
+                    prod = (prod *(N/i))%mod;
+                }
+            }
+        }
+        return (int) prod;
+    }
+}
