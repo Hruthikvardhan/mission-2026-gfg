@@ -1,0 +1,74 @@
+Largest Element in Array
+Difficulty: BasicAccuracy: 67.48%Submissions: 558K+Points: 1Average Time: 20m
+Given an array arr[]. The task is to find the largest element and return it.
+Program	Algorithm	Time Complexity	Space Complexity
+Largest Element	Linear Scan	O(n)	O(1)
+Examples:
+
+Input: arr[] = [1, 8, 7, 56, 90]
+Output: 90
+Explanation: The largest element of the given array is 90.
+Input: arr[] = [5, 5, 5, 5]
+Output: 5
+Explanation: The largest element of the given array is 5.
+Input: arr[] = [10]
+Output: 10
+Explanation: There is only one element which is the largest.
+Constraints:
+1 <= arr.size()<= 106
+0 <= arr[i] <= 106
+
+gfg code :
+class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        int max = arr[0];
+        
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]>max){
+                max =arr[i];
+            }
+        }
+        return max;
+    }
+}
+
+
+full code :
+import java.util.*;
+public class Main
+{
+    
+    public static int largest(int[] arr){
+        int max = arr[0];
+        for(int i=1;i< arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+	public static void main(String[] args) {
+	//	System.out.println("Hello World");
+	Scanner sc = new Scanner(System.in);
+	/*int arr[] = {10,20,30,40,50};
+	int x =10;
+	System.out.println(largest(arr,x));
+	literal method
+	*/
+	
+	
+	//users input
+	int n = sc.nextInt();
+	int[] arr = new int[n];
+	
+	for(int i=0;i< arr.length;i++){
+	    arr[i]=sc.nextInt();
+	}
+	//here no use of x here 
+	
+	//output printing 
+	System.out.println(largest(arr));
+	sc.close();
+	}
+}
